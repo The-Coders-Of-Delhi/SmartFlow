@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #121212;
+  color: white;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #1e1e1e;
+  border-right: 2px solid #333;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+
+/* Add inside .sidebar */
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e9efc;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sidebar button:hover {
+  background-color: #d8315b;
+}
+
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: cyan;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sidebar ul li:hover {
+  background-color: #01796F;
+  color: white;
+}
+
+/* Chat main area */
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 15px;
+  background-color: #1e1e1e;
+  border-bottom: 2px solid #333;
+  text-align: center;
+}
+
+.chat-header h1 {
+  margin: 0;
+  color: cyan;
+  font-size: 2rem;
+}
+.chat-header h1:hover {
+  color: #39FF14;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #121212;
+}
+
+.chat-box div {
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.chat-box .user-msg {
+  align-self: flex-end;
+  background-color: #4e9efc;
+  color: white;
+}
+.chat-box .user-msg:hover {
+  background-color: #d8315b;
+}
+
+.chat-box .bot-msg {
+  align-self: flex-start;
+  background-color: #2a2a2a;
+  color: white;
+}
+.chat-box .bot-msg:hover {
+  background-color: #01796F;
+}
+
+.chat-form {
+  display: flex;
+  padding: 10px;
+  background-color: #1e1e1e;
+  border-top: 2px solid #333;
+  gap: 10px;
+}
+
+.chat-form textarea {
+  flex: 1;
+  resize: none;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+}
+
+.chat-form button.emoji-btn {
+  padding: 0 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e9efc;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-form button.emoji-btn:hover {
+  background-color: #B90E08;
+}
+
+
+#blink {
+  opacity: 0.7;
+  font-style: italic;
+  animation: blink 1s infinite;
+  display: inline-block;
+}
+/* Add these styles to your style.css */
+table {
+  width: 100%; /* Make the table take full width of its container */
+  border-collapse: collapse; /* Collapse borders for a cleaner look */
+  margin-top: 10px; /* Add some space above the table */
+}
+
+th, td {
+  border: 1px solid #769; /* Add borders to table cells */
+  padding: 8px; /* Add some padding inside cells */
+  text-align: left; /* Align text to the left */
+}
+
+th {
+  background-color: #2a2a2a; /* Style the table header */
+  color: white;
+}
+@keyframes blink {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 0.3; }
+}

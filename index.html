@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SmartFlow AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <h2>Chats</h2>
+      <button id="new-chat-btn">New Chat</button>
+      <ul id="chat-history"></ul>
+    </aside>
+
+    <main class="chat-main">
+      <header class="chat-header">
+        <h1>Welcome To SmartFlow!<h4><i id="blink"><b>version 1.0(Beta)</b></i></h4></h1>
+      </header>
+
+      <section class="chat-box" id="response"></section>
+
+      <form id="chat-form" class="chat-form">
+        <textarea id="user" placeholder="Type your message...🚀"></textarea>
+        <button type="submit" id="send-btn" class="emoji-btn">➤</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
